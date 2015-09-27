@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="unoesc.edu.br.comandadigital" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ComandaActivity"
+            android:label="@string/title_activity_comanda" >
+        </activity>
+        <activity
+            android:name=".MesasActivity"
+            android:label="@string/title_activity_mesas" >
+        </activity>
+        <activity
+            android:name=".FaturaActivity"
+            android:label="@string/title_activity_fatura" >
+        </activity>
+        <activity
+            android:name=".ProdutoActivity"
+            android:label="@string/title_activity_produto" >
+        </activity>
+        <activity
+            android:name=".CopaActivity"
+            android:label="@string/title_activity_copa" >
+        </activity>
+        <activity
+            android:name=".CozinhaActivity"
+            android:label="@string/title_activity_cozinha" >
+        </activity>
+    </application>
+
+</manifest>

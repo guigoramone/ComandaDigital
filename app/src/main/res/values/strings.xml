@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ComandaDigital</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_comanda">ComandaActivity</string>
+    <string name="title_activity_mesas">MesasActivity</string>
+    <string name="title_activity_fatura">FaturaActivity</string>
+    <string name="title_activity_produto">ProdutoActivity</string>
+    <string name="title_activity_copa">CopaActivity</string>
+    <string name="title_activity_cozinha">CozinhaActivity</string>
+</resources>

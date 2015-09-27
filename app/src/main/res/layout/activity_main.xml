@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:baselineAligned="false"
+    android:background="@drawable/fundo">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btComanda"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/comanda"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btMesa"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/mesas"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/btSair"
+        android:layout_alignStart="@+id/btSair"
+        android:adjustViewBounds="false"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSair"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/sair"
+        android:layout_alignTop="@+id/btFatura"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btFatura"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/fatura"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sair"
+        android:id="@+id/txtSair"
+        android:layout_above="@+id/btSair"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Mesas"
+        android:id="@+id/tvMesa"
+        android:layout_below="@+id/btMesa"
+        android:textSize="40dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Comanda"
+        android:id="@+id/tvComanda"
+        android:textSize="30dp"
+        android:layout_below="@+id/btComanda"
+        android:layout_alignRight="@+id/btComanda"
+        android:layout_alignEnd="@+id/btComanda"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Faturar"
+        android:id="@+id/tvFaturar"
+        android:layout_above="@+id/btFatura"
+        android:layout_alignRight="@+id/btFatura"
+        android:layout_alignEnd="@+id/btFatura"
+        android:textSize="40dp"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btcopa"
+        android:src="@drawable/copa"
+        android:layout_alignBottom="@+id/btFatura"
+        android:layout_alignLeft="@+id/btCozinha"
+        android:layout_alignStart="@+id/btCozinha"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btCozinha"
+        android:src="@drawable/cozinha"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Copa"
+        android:id="@+id/tvCopa"
+        android:layout_above="@+id/btcopa"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cozinha"
+        android:id="@+id/tvCozinha"
+        android:layout_below="@+id/btCozinha"
+        android:layout_alignRight="@+id/btCozinha"
+        android:layout_alignEnd="@+id/btCozinha"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
