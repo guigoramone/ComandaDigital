@@ -7,21 +7,24 @@
     tools:context="unoesc.edu.br.comandadigital.ComandaActivity"
     android:orientation="horizontal">
 
-    <LinearLayout
+    <fragment
         android:layout_width="0dp"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal">
-        <ListView
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:id="@+id/lstProduto" />
+        android:name="unoesc.edu.br.comandadigital.ProdutoActivity"
+        android:id="@+id/fragmentlist"/>
 
 
-    </LinearLayout>
-    <ListView
-        android:layout_width="0dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="2"/>
+
+   <FrameLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <ListView
+           android:layout_width="0dp"
+           android:layout_height="fill_parent"
+           android:layout_weight="2"/>
+
+   </FrameLayout>
+
 
 </LinearLayout>

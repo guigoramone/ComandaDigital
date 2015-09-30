@@ -20,7 +20,7 @@ import java.util.Vector;
  */
 public class ProdutoDAO {
 
-    private static final String URL = "http://172.18.19.30:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
+    private static final String URL = "http://172.18.24.187:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
     private static final String NAMESPACE = "http://unoesc.com.br.edu";
     //casa: 192.168.1.24
     //unoesc 172.18.19.119
@@ -51,10 +51,10 @@ public class ProdutoDAO {
             SoapObject soapObject = (SoapObject) response.getProperty(i);
 
             Produto p = new Produto();
-            p.setCodi(Integer.parseInt(soapObject.getProperty("codi").toString()));
-            p.setDescricao(soapObject.getProperty("descricao").toString());
-            p.setPreco(Double.parseDouble(soapObject.getProperty("preco").toString()));
-            p.setCategoria(Integer.parseInt(soapObject.getProperty("categoria").toString()));
+            p.setCodi(Integer.parseInt(soapObject.getProperty(" ").toString()));
+            p.setDescricao(soapObject.getProperty(" ").toString());
+            p.setPreco(Double.parseDouble(soapObject.getProperty("").toString()));
+            p.setCategoria(Integer.parseInt(soapObject.getProperty("").toString()));
 
             produtos.add(p);
         }

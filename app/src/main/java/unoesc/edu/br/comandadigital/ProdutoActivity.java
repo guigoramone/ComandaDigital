@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.StrictMode;
+import android.support.v4.app.ListFragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,14 +33,14 @@ public class ProdutoActivity extends ActionBarActivity {
 
 
         // Operações de rede não podem ser realizadas na thread principal
-        // new MyAsyncTask().execute();
+        new MyAsyncTask().execute();
 
     }
 
 
     private class MyAsyncTask extends AsyncTask<Void, Void, ArrayList<Produto>> {
 
-        boolean erro = true;
+        boolean erro = false;
 
         private final ProgressDialog dialog = new ProgressDialog(
                 ProdutoActivity.this);
@@ -81,16 +82,7 @@ public class ProdutoActivity extends ActionBarActivity {
 
             if (erro == false) {
 
-                // ProdutoDAO dao = new ProdutoDAO();
-
-               /* ArrayList<Produto> produtos = result;
-                ArrayAdapter<Produto> adapter = new ArrayAdapter<Produto>(
-                        ProdutoActivity.this, android.R.layout.simple_list_item_1,
-                        R.id.ltProdutos);
-                lvProdutos.setAdapter(adapter);*/
-
-
-
+              
                ArrayList<Produto> listaProduto = result;
                 ArrayAdapter<Produto> adapter = new ArrayAdapter<Produto>(
                         ProdutoActivity.this, android.R.layout.simple_list_item_1,
