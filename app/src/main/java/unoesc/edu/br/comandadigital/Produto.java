@@ -6,13 +6,13 @@ import java.io.Serializable;
  * Created by root on 17/09/15.
  */
 public class Produto {
-    private  int codi;
+    private int codi;
     private String descricao;
     private Double preco;
     private int categoria;
 
 
-    public Produto(){
+    public Produto() {
 
     }
 
@@ -58,12 +58,18 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
+
+
+        return  "Codigo: "+ codi + '\n'+descricao +'\n'+ "R$ "+ preco + '\n'+"Cat: "+categoria ;
+
+
+        /*"Produto{" +
                 "codi=" + codi +
                 ", descricao='" + descricao + '\'' +
                 ", preco=" + preco +
                 ", categoria=" + categoria +
-                '}';
+                '}';*/
+
     }
 }
 

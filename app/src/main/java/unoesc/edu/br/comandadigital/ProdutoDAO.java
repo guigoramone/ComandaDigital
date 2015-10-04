@@ -51,10 +51,10 @@ public class ProdutoDAO {
             SoapObject soapObject = (SoapObject) response.getProperty(i);
 
             Produto p = new Produto();
-            p.setCodi(Integer.parseInt(soapObject.getProperty(" ").toString()));
-            p.setDescricao(soapObject.getProperty(" ").toString());
-            p.setPreco(Double.parseDouble(soapObject.getProperty("").toString()));
-            p.setCategoria(Integer.parseInt(soapObject.getProperty("").toString()));
+            p.setCodi(Integer.parseInt(soapObject.getProperty("codi").toString()));
+            p.setDescricao(soapObject.getProperty("descricao").toString());
+            p.setPreco(Double.parseDouble(soapObject.getProperty("preco").toString()));
+            p.setCategoria(Integer.parseInt(soapObject.getProperty("categoria").toString()));
 
             produtos.add(p);
         }
