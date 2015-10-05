@@ -7,7 +7,87 @@
     tools:context="unoesc.edu.br.comandadigital.FaturaActivity"
     android:background="@drawable/fundofatura">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mesas a Faturar"
+        android:id="@+id/tvFinanceiro"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Nº da Mesa"
+        android:id="@+id/edPesuisaMesa"
+        android:layout_below="@+id/tvFinanceiro"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+         />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btPesquisarMesa"
+        android:src="@drawable/pesquisar"
+        android:layout_toRightOf="@+id/edPesuisaMesa"
+        android:layout_toEndOf="@+id/edPesuisaMesa"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/edPesuisaMesa" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSairMesas"
+        android:src="@drawable/sairtela"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/tvFinanceiro"
+        android:layout_toStartOf="@+id/tvFinanceiro" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btFatura"
+        android:src="@drawable/faturar"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tvFinanceiro" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sair"
+        android:id="@+id/tvSairMesas"
+        android:layout_above="@+id/btSairMesas"
+        android:layout_alignLeft="@+id/btSairMesas"
+        android:layout_alignStart="@+id/btSairMesas"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Faturar"
+        android:id="@+id/tvFatura"
+        android:textStyle="bold"
+        android:layout_above="@+id/btFatura"
+        android:layout_alignLeft="@+id/btFatura"
+        android:layout_alignStart="@+id/btFatura"
+        android:layout_alignRight="@+id/btFatura"
+        android:layout_alignEnd="@+id/btFatura" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ltMesas"
+        android:layout_below="@+id/edPesuisaMesa"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>

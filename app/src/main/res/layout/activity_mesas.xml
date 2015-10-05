@@ -7,7 +7,84 @@
     tools:context="unoesc.edu.br.comandadigital.MesasActivity"
     android:background="@drawable/fundomesas">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mesas Abertas"
+        android:id="@+id/tvMesasAbertas"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Digite o Nº da Mesa"
+        android:id="@+id/edPesuisaMesa"
+        android:layout_below="@+id/tvMesasAbertas"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/imageButton2" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btPesquisarMesa"
+        android:src="@drawable/pesquisar"
+        android:layout_toRightOf="@+id/edPesuisaMesa"
+        android:layout_toEndOf="@+id/edPesuisaMesa"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/edPesuisaMesa" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSairMesas"
+        android:src="@drawable/sairtela"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/tvMesasAbertas"
+        android:layout_toStartOf="@+id/tvMesasAbertas" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btFechaMesa"
+        android:src="@drawable/fecharmesa"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/tvMesasAbertas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Sair"
+        android:id="@+id/tvSairMesas"
+        android:layout_above="@+id/btSairMesas"
+        android:layout_alignLeft="@+id/btSairMesas"
+        android:layout_alignStart="@+id/btSairMesas"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Fechar Mesa"
+        android:id="@+id/tvFecharMesa"
+        android:layout_above="@+id/btFechaMesa"
+        android:layout_alignLeft="@+id/btFechaMesa"
+        android:layout_alignStart="@+id/btFechaMesa"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ltMesas"
+        android:layout_below="@+id/edPesuisaMesa"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

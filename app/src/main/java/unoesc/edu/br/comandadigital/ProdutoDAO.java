@@ -20,7 +20,7 @@ import java.util.Vector;
  */
 public class ProdutoDAO {
 
-    private static final String URL = "http://172.18.24.187:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
+    private static final String URL = "http://192.168.1.24:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
     private static final String NAMESPACE = "http://unoesc.com.br.edu";
     //casa: 192.168.1.24
     //unoesc 172.18.19.119

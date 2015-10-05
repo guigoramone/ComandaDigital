@@ -1,5 +1,6 @@
 package unoesc.edu.br.comandadigital;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -20,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class ProdutoActivity extends ActionBarActivity {
+public class ProdutoActivity extends Activity {
 
     private ListView lvProdutos;
 

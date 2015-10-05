@@ -9,15 +9,14 @@
     tools:context="unoesc.edu.br.comandadigital.ProdutoActivity"
     android:orientation="horizontal">
 
-    <EditText
+  <!--  <EditText
         android:id="@+id/etBusca"
         android:hint="Pesquisar"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-
-
-        />
-
+        android:clickable="false"
+        android:maxWidth="100dp" />
+-->
     <ListView
     android:layout_width="450dp"
     android:layout_height="495dp"
@@ -49,8 +48,9 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Informe a mesa"
-        android:layout_marginLeft="600dp"/>
+        android:hint="Nº da Mesa"
+        android:layout_marginLeft="600dp"
+        android:inputType="number" />
 
 
 </FrameLayout>

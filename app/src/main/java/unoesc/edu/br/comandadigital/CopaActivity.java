@@ -1,38 +1,113 @@
 package unoesc.edu.br.comandadigital;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
-public class CopaActivity extends ActionBarActivity {
+public class CopaActivity extends Activity {
+
+    private ListView lvProdutosCopa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_copa);
+
+        lvProdutosCopa = (ListView) findViewById(R.id.ltCopa);
+
+
+        // Operações de rede não podem ser realizadas na thread principal
+        new MyAsyncTask().execute();
+
+
+        //finaliza a aplicação
+        final ImageButton btSair = (ImageButton) findViewById(R.id.btsairtela);
+        btSair.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_copa, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    private class MyAsyncTask extends AsyncTask<Void, Void, ArrayList<Itens>> {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        boolean erro = false;
+
+        private final ProgressDialog dialog = new ProgressDialog(
+                CopaActivity.this);
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+
+            this.dialog.setMessage("Aguarde...");
+            this.dialog.show();
+
         }
 
-        return super.onOptionsItemSelected(item);
+        @Override
+        protected ArrayList<Itens> doInBackground(Void... params) {
+
+            ArrayList<Itens> retorno = null;
+
+            try {
+
+                ItensCopaDAO conexao = new ItensCopaDAO();
+                retorno = conexao.listaProdutoCopa();
+
+            } catch (Exception e) {
+                erro = true;
+                e.printStackTrace();
+            }
+
+            return retorno;
+
+
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<Itens> result) {
+
+            if (this.dialog.isShowing()) {
+                this.dialog.dismiss();
+            }
+
+            if (erro == false) {
+
+
+                ArrayList<Itens> listaProdutoCopa = result;
+                ArrayAdapter<Itens> adapter = new ArrayAdapter<Itens>(
+                        CopaActivity.this, android.R.layout.simple_list_item_1,
+                       listaProdutoCopa);
+                lvProdutosCopa.setAdapter(adapter);
+
+            } else {
+
+                Toast.makeText(CopaActivity.this,
+                        "Ocorreu um erro ao acessar o Web Service.",
+                        Toast.LENGTH_LONG).show();
+
+            }
+
+        }
+
+
+
+
+
+
     }
+
+
 }
