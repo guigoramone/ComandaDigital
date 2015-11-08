@@ -13,27 +13,28 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Pedidos da Cozinha"
-        android:id="@+id/tvTituloCozinha"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/tvTituloCopa"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+       />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btAtualizar"
+        android:id="@+id/btAtualizarCopa"
         android:src="@drawable/refresh"
         android:background="@android:color/transparent"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/tvTituloCozinha"
-        android:layout_toEndOf="@+id/tvTituloCozinha" />
+        android:layout_toRightOf="@+id/tvTituloCopa"
+        android:layout_toEndOf="@+id/tvTituloCopa" />
 
     <ListView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:id="@+id/listView"
-        android:layout_below="@+id/ltCozinha"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="700dp"
+        android:id="@+id/ltCozinha"
+        android:layout_above="@+id/tvSairTela"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -41,9 +42,9 @@
         android:id="@+id/btsairtela"
         android:src="@drawable/sairtela"
         android:background="@android:color/transparent"
-        android:layout_alignTop="@+id/btAtualizar"
-        android:layout_toLeftOf="@+id/tvTituloCozinha"
-        android:layout_toStartOf="@+id/tvTituloCozinha" />
+        android:layout_alignTop="@+id/btAtualizarCopa"
+        android:layout_toLeftOf="@+id/tvTituloCopa"
+        android:layout_toStartOf="@+id/tvTituloCopa" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -65,7 +66,42 @@
         android:text="Atualizar"
         android:id="@+id/tvAtualizar"
         android:layout_alignTop="@+id/tvSairTela"
-        android:layout_alignRight="@+id/btAtualizar"
-        android:layout_alignEnd="@+id/btAtualizar"
+        android:layout_alignRight="@+id/btAtualizarCopa"
+        android:layout_alignEnd="@+id/btAtualizarCopa"
         android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtitenscozinha"
+        android:layout_below="@+id/tvTituloCopa"
+        android:layout_alignLeft="@+id/tvTituloCopa"
+        android:layout_alignStart="@+id/tvTituloCopa"
+        android:layout_marginTop="30dp"
+        android:hint="Nº Item fazer/desfazer"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtaddcozinha"
+        android:layout_alignBottom="@+id/edtitenscozinha"
+        android:layout_toRightOf="@+id/edtitenscozinha"
+        android:layout_toEndOf="@+id/edtitenscozinha"
+        android:src="@drawable/check"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtdeletecozinha"
+        android:background="@android:color/transparent"
+        android:src="@drawable/delete"
+        android:layout_alignTop="@+id/ibtaddcozinha"
+        android:layout_toRightOf="@+id/ibtaddcozinha"
+        android:layout_toEndOf="@+id/ibtaddcozinha"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp" />
+
 </RelativeLayout>

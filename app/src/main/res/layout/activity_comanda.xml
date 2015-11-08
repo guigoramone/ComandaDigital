@@ -1,30 +1,124 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="unoesc.edu.br.comandadigital.ComandaActivity"
-    android:orientation="horizontal">
-
-    <fragment
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:name="unoesc.edu.br.comandadigital.ProdutoActivity"
-        android:id="@+id/fragmentlist"/>
+    android:orientation="horizontal"
+    android:background="@drawable/fundoprodutos">
 
 
-
-   <FrameLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content">
-       <ListView
-           android:layout_width="0dp"
-           android:layout_height="fill_parent"
-           android:layout_weight="2"/>
-
-   </FrameLayout>
+    <ListView
+        android:layout_width="300dp"
+        android:layout_height="530dp"
+        android:id="@+id/ltprodcomanda"
+        android:layout_gravity="left|top"
+        android:layout_below="@+id/tvproduto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
-</LinearLayout>
+    <ListView
+        android:layout_width="300dp"
+        android:layout_height="530dp"
+        android:id="@+id/ltcomanada"
+        android:layout_alignTop="@+id/ltprodcomanda"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Comanda"
+        android:id="@+id/tvcomanda"
+        android:textStyle="bold"
+        android:layout_above="@+id/ltcomanada"
+        android:layout_alignRight="@+id/ltcomanada"
+        android:layout_alignEnd="@+id/ltcomanada"
+        android:layout_marginRight="96dp"
+        android:layout_marginEnd="96dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cardapio"
+        android:id="@+id/tvproduto"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ltprodcomanda"
+        android:layout_alignEnd="@+id/ltprodcomanda"
+        android:layout_marginRight="94dp"
+        android:layout_marginEnd="94dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtsairComanda"
+        android:src="@drawable/sairtela"
+        android:background="@android:color/transparent"
+        android:longClickable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/ltprodcomanda"
+        android:layout_toEndOf="@+id/ltprodcomanda"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtNovaComanda"
+        android:src="@drawable/addnew"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/ibtsairComanda"
+        android:layout_toLeftOf="@+id/ltcomanada"
+        android:layout_toStartOf="@+id/ltcomanada" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtmesacomanda"
+        android:text="Nº Mesa"
+        android:layout_alignTop="@+id/edtprodcomanda"
+        android:layout_alignRight="@+id/ibtsairComanda"
+        android:layout_alignEnd="@+id/ibtsairComanda" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtprodcomanda"
+        android:text="Cod Prod"
+        android:layout_alignTop="@+id/ltcomanada"
+        android:layout_toLeftOf="@+id/ibtNovaComanda"
+        android:layout_toStartOf="@+id/ibtNovaComanda" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtadditem"
+        android:src="@drawable/check"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/edtmesacomanda"
+        android:layout_alignRight="@+id/edtmesacomanda"
+        android:layout_alignEnd="@+id/edtmesacomanda" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtdeletaitem"
+        android:layout_alignTop="@+id/ibtadditem"
+        android:layout_alignLeft="@+id/edtprodcomanda"
+        android:layout_alignStart="@+id/edtprodcomanda"
+        android:background="@android:color/transparent"
+        android:src="@drawable/delete"/>
+
+
+</RelativeLayout>

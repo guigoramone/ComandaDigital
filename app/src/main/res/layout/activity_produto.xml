@@ -50,7 +50,9 @@
         android:layout_height="wrap_content"
         android:hint="Nº da Mesa"
         android:layout_marginLeft="600dp"
-        android:inputType="number" />
+        android:inputType="number"
+        android:numeric="integer"
+        android:selectAllOnFocus="false" />
 
 
 </FrameLayout>

@@ -14,27 +14,29 @@
         android:text="Mesas a Faturar"
         android:id="@+id/tvFinanceiro"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Digite o Nº da Mesa"
-        android:id="@+id/edPesuisaMesa"
+        android:id="@+id/edPesuisaMesaFechada"
+        android:inputType="number"
+        android:numeric="integer"
         android:layout_below="@+id/tvFinanceiro"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-         />
+        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btPesquisarMesa"
+        android:id="@+id/btPesquisarMesaFechada"
         android:src="@drawable/pesquisar"
-        android:layout_toRightOf="@+id/edPesuisaMesa"
-        android:layout_toEndOf="@+id/edPesuisaMesa"
+        android:layout_toRightOf="@+id/edPesuisaMesaFechada"
+        android:layout_toEndOf="@+id/edPesuisaMesaFechada"
         android:background="@android:color/transparent"
-        android:layout_alignTop="@+id/edPesuisaMesa" />
+        android:layout_alignTop="@+id/edPesuisaMesaFechada" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -85,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ltMesas"
-        android:layout_below="@+id/edPesuisaMesa"
+        android:layout_below="@+id/edPesuisaMesaFechada"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 

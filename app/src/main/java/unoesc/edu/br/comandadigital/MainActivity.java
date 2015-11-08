@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         final ImageButton btComanda = (ImageButton)findViewById(R.id.btComanda);
         btComanda.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intencao = new Intent(MainActivity.this, ProdutoActivity.class);
+                Intent intencao = new Intent(MainActivity.this, ComandaActivity.class);
                 startActivity(intencao);
             }
         });

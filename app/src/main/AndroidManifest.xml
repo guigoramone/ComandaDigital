@@ -21,14 +21,20 @@
         </activity>
         <activity
             android:name=".ComandaActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_comanda" >
         </activity>
         <activity
             android:name=".MesasActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_mesas" >
         </activity>
         <activity
             android:name=".FaturaActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_fatura" >
         </activity>
         <activity
@@ -37,12 +43,18 @@
         </activity>
         <activity
             android:name=".CopaActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_copa" >
         </activity>
         <activity
             android:name=".CozinhaActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_cozinha" >
         </activity>
     </application>
 
 </manifest>
+<!--android:windowSoftInputMode="adjustPan" ao abrir o teclado não muda os a posição
+dos componentes  na tela-->

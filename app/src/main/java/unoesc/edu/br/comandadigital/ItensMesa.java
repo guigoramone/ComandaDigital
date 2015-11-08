@@ -3,7 +3,7 @@ package unoesc.edu.br.comandadigital;
 /**
  * Created by root on 04/10/15.
  */
-public class Itens {
+public class ItensMesa {
 
     private int id;
     private int nume_mesa;
@@ -12,13 +12,14 @@ public class Itens {
     private int categoria;
     private String enviado;
     private String mesa_status;
+    private Double sum;
 
-    public Itens(){
+    public ItensMesa(){
 
     }
 
-    public Itens(int id, int nume_mesa, String produto, double valor,
-                 int categoria, String enviado, String mesa_status) {
+    public ItensMesa(int id, int nume_mesa, String produto, double valor,
+                     int categoria, String enviado, String mesa_status, Double sum) {
         super();
         this.id = id;
         this.nume_mesa = nume_mesa;
@@ -27,6 +28,7 @@ public class Itens {
         this.categoria = categoria;
         this.enviado = enviado;
         this.mesa_status = mesa_status;
+        this.sum = sum;
     }
 
     public int getId() {
@@ -85,28 +87,24 @@ public class Itens {
         this.mesa_status = mesa_status;
     }
 
-    @Override
-    public String toString() {
-        return "Itens{" +
-                "id=" + id +
-                ", nume_mesa=" + nume_mesa +
-                ", produto='" + produto + '\'' +
-                ", valor=" + valor +
-                ", categoria=" + categoria +
-                ", enviado='" + enviado + '\'' +
-                ", mesa_status='" + mesa_status + '\'' +
-                '}';
+    public Double getSum() {
+        return sum;
     }
-/*@Override
+
+    public void setSum(Double sum) {
+        this.sum = sum;
+    }
+
+    @Override
     public  String toString() {
 
 
-        return  "Id: "+ id + '\n'+nume_mesa +'\n'+ "R$ "+ valor + '\n'+"Cat: "+categoria ;
+        return  '\n'+"Mesa nº:"+nume_mesa +'\n'+ produto + "R$: " + valor;
 
 
 
 
-    }*/
+    }
 
 }
 

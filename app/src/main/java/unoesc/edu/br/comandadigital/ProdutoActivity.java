@@ -2,23 +2,13 @@ package unoesc.edu.br.comandadigital;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.os.StrictMode;
-import android.support.v4.app.ListFragment;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 public class ProdutoActivity extends Activity {
@@ -34,12 +24,12 @@ public class ProdutoActivity extends Activity {
 
 
         // Operações de rede não podem ser realizadas na thread principal
-        new MyAsyncTask().execute();
+        new ProdutoTask().execute();
 
     }
 
 
-    private class MyAsyncTask extends AsyncTask<Void, Void, ArrayList<Produto>> {
+    private class ProdutoTask extends AsyncTask<Void, Void, ArrayList<Produto>> {
 
         boolean erro = false;
 

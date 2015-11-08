@@ -20,13 +20,13 @@ import java.util.Vector;
  */
 public class ProdutoDAO {
 
-    private static final String URL = "http://192.168.1.24:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
+    private static final String URL = "http://192.168.43.8:8080/comandadigitalwebservices/services/ProdutoDAO?wsdl";
     private static final String NAMESPACE = "http://unoesc.com.br.edu";
     //casa: 192.168.1.24
     //unoesc 172.18.19.119
 
-    private static final String METHOD_NAME = "listaProduto";
-    private static final String SOAP_ACTION = "http://unoesc.com.br.edu/listaProduto";
+    private static final String METHOD_NAME = "listarTudo";
+    private static final String SOAP_ACTION = "http://unoesc.com.br.edu/listarTudo";
 
 
     public ArrayList<Produto> listaProduto() throws Exception {
@@ -44,7 +44,7 @@ public class ProdutoDAO {
 
         SoapObject response = (SoapObject) envelope.bodyIn;
 
-        ArrayList<Produto> produtos = new ArrayList<Produto>();
+        ArrayList<Produto> produtos = new ArrayList<>();
 
         for (int i = 0; i < response.getPropertyCount(); i ++){
 
@@ -54,7 +54,6 @@ public class ProdutoDAO {
             p.setCodi(Integer.parseInt(soapObject.getProperty("codi").toString()));
             p.setDescricao(soapObject.getProperty("descricao").toString());
             p.setPreco(Double.parseDouble(soapObject.getProperty("preco").toString()));
-            p.setCategoria(Integer.parseInt(soapObject.getProperty("categoria").toString()));
 
             produtos.add(p);
         }
